@@ -1,7 +1,7 @@
 const express=require('express')
 const app=express()
 const path=require('path')
-const port=process.env.port
+const port=process.env.PORT
 const fs=require('fs')
 
 let users
