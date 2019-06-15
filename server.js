@@ -1,7 +1,7 @@
 const express=require('express')
 const app=express()
 const path=require('path')
-const port=process.env.PORT
+const port=process.env.PORT||5005
 const fs=require('fs')
 
 let users
@@ -46,7 +46,7 @@ app.post('/donate', function(req,res,next){
 for(let i in users){
      if(users[i].email==req.body.email){
           let user=users[i]
-          user.donations.push(req.body)
+          users[i].donations.push(req.body)
           fs.writeFile('users.txt', JSON.stringify(users),(err)=>{
                console.log(err)
           })
@@ -64,8 +64,8 @@ app.post('/login', function(req,res,next){
        if(i.email==req.body.email && i.password==req.body.password){
         name=i.name
         email=i.email
-        if(i.donations[0]){
-             donate=i.donations[0].donate
+        if(i.donations[i.donations.length-1]){
+             donate=i.donations[i.donations.length-1].donate
         }else{
              donate=0
         }

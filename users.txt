@@ -1,1 +1,1 @@
-[{"name":"a","occupation":"b","city":"d","state":"e","mobile":"45243","phone":"2352435","email":"a@b.com","password":"a@b.com","other":"on","donations":[{"name":"a","email":"a@b.com","donate":"101"}]}]
+[{"name":"a","occupation":"b","city":"d","state":"e","mobile":"45243","phone":"2352435","email":"a@b.com","password":"a@b.com","other":"on","donations":[{"name":"a","email":"a@b.com","donate":"1000"},{"name":"a","email":"a@b.com","donate":"123"},{"name":"a","email":"a@b.com","donate":"5001"}]}]
