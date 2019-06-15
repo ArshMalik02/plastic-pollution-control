@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dashboard</title>
+</head>
+<body style="background-color: #349e7a">
+
+    <nav class="navbar navbar-expand-md navbar-inverse" style=" align-content: center; background-color: #cbeea8"><hr>
+			<a class="navbar-brand" href="#" style="color: white; font-weight: 700"> <img src="../images/logo.png" style="height: 70px; width: 500px;"> </a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#idi" style="background-color: rgb(255, 255, 255)">
+				<span class="navbar-toggler-icon"></span></button>
+				<div class="collapse navbar-collapse" id="idi">
+					<ul class="navbar-nav navbar-right">
+				<li class="nav-item"><a href="../index.html" class="btn" style=" font-weight: 500;background-color: #349e7a; color: white; margin: 10px; "> Home</a></li>
+			<li class="nav-item"><a href="/html/about.html" class="btn" style=" font-weight: 500; background-color: #349e7a; color: white; margin: 10px; "> About</a></li>
+			<li class="nav-item"><a href="html/Blog.html" class="btn" style=" font-weight: 500; color:white; background-color:#349e7a ; margin: 10px"> Blog</a></li>
+			<li class="nav-item"><a href="html/SignUp.html" class="btn" style="font-weight: 500; color: white; background-color:#349e7a; margin: 10px">Sign Up</a></li>
+			<li class="nav-item"><a href="html/donate.html" class="btn" style="font-weight: 500; color: white; background-color:#349e7a; margin: 10px">Donate</a></li>
+			<li class="nav-item"><a href="html/login.html" class="btn" style="font-weight: 500; color: white; background-color:#349e7a; margin: 10px">Login</a></li>
+				
+				</ul>
+				</div> 
+			</nav>
+            
+
+<div class="container">
+    <h1 class="mt-4">Dashboard</h1>
+    <p class="lead mb-3" style="font-size: 20px; font-color: white">Welcome {{name}}
+    <br>
+    <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="/images/welcome.png" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Your Donations</h5>
+              <p class="card-text">Hey {{name}} , your donations have been considered and a detail of the have been emailed to {{email}}
+                  Your donations were {{donate}}
+              </p>
+              
+            </div>
+            
+
+              
+            
+          </div>    
+    </p>
+
+</div>
+
+</p>
+    
+</body>
+</html>
