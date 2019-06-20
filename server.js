@@ -48,7 +48,7 @@ for(let i in users){
           let user=users[i]
           users[i].donations.push(req.body)
           fs.writeFile('users.txt', JSON.stringify(users),(err)=>{
-               console.log(err)
+               if(err)console.log(err)
           })
 
      }
@@ -60,8 +60,7 @@ for(let i in users){
 
 app.post('/login', function(req,res,next){
      for(let i of users){
-          
-       if(i.email==req.body.email && i.password==req.body.password){
+       if((i.email==req.body.email) && (i.password==req.body.password)){
         name=i.name
         email=i.email
         if(i.donations[i.donations.length-1]){
@@ -69,17 +68,14 @@ app.post('/login', function(req,res,next){
         }else{
              donate=0
         }
-       res.render('dashboard.hbs',
+       return res.render('dashboard.hbs',
        {name:name,
        email:email,
        donate: donate})
        }
-       else{
-          res.send("<h1>Not Authorized</h1>")
-       }
-
+     
      }
- 
+     res.send("<h1>Not Authorized</h1>")
 })
 
 app.listen(port, function(){
